@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BethanysPieShop.ViewModels;
 
 namespace BethanysPieShop.Controllers
 {
@@ -21,14 +22,14 @@ namespace BethanysPieShop.Controllers
         // GET: /<controller>/
         public IActionResult List()
         {
-            //ViewBag.CurrentCategory = "Cheese cakes";
+            // ViewBag.CurrentCategory = "Cheese cakes";
 
-            return View(_pieRepository.AllPies);
-           // PiesListViewModel piesListViewModel = new PiesListViewModel();
-           // piesListViewModel.Pies = _pieRepository.AllPies;
+            //return View(_pieRepository.AllPies);
+            PiesListViewModel piesListViewModel = new PiesListViewModel();
+           piesListViewModel.Pies = _pieRepository.AllPies;
 
-           // piesListViewModel.CurrentCategory = "Cheese cakes";
-           // return View(piesListViewModel);
+            piesListViewModel.CurrentCategory = "Cheese cakes";
+            return View(piesListViewModel);
         }
     }
 }
