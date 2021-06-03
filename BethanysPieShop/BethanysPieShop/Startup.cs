@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop
 {
+    //Startup
     public class Startup
     {
         public IConfiguration Configuration { get; }
