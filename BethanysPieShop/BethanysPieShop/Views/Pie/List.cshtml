@@ -1,10 +1,10 @@
-﻿@model IEnumerable<BethanysPieShop.Models.Pie> 
-@{ 
+﻿@model IEnumerable<BethanysPieShop.Models.Pie>
+@{
     ViewData["Title"] = "Pie";
 }
 @foreach (var pie in Model)
 {
-                <h2>@pie.Name</h2>
-                <h3>@pie.Price.ToString("c")</h3>
-                <h4>@pie.Category.CategoryName</h4>
-            }
+    <h2>@pie.Name</h2>
+    <h3>@pie.Price.ToString("c")</h3>
+    <h4>@pie.Category.CategoryName</h4>
+}
